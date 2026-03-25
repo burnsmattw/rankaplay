@@ -1,18 +1,18 @@
 export async function GET() {
   const body = {
     webcredentials: {
-      apps: ["93PUP5AUR64Y.com.Burnt.Ranka"]
+        apps: ["PUP5AUR64Y.Burnt.Ranka"]
     },
     applinks: {
-      apps: [],
-      details: [
-        {
-          appID: "93PUP5AUR64Y.com.Burnt.Ranka",
-          paths: ["*"]
-        }
-      ]
+        apps: [],
+        details: [
+            {
+                appID: "PUP5AUR64Y.Burnt.Ranka",
+                paths: ["*"]
+            }
+        ]
     }
-  };
+};
 
   return new Response(JSON.stringify(body), {
     headers: {
@@ -20,3 +20,4 @@ export async function GET() {
     },
   });
 }
+
