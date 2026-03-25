@@ -138,7 +138,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Live Rankings",
-                desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats",
+                desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats.",
               },
             ].map((f) => (
               <div
