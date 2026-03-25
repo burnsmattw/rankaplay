@@ -81,7 +81,7 @@ export default function Home() {
       <section style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(255,255,255,0.03)" }}>
         <div className="max-w-4xl mx-auto px-6 py-8 grid grid-cols-3 text-center gap-4">
           {[
-            { value: "50+", label: "Game Types" },
+            { value: "150+", label: "Game Types" },
             { value: "∞", label: "Players & Teams" },
             { value: "Free", label: "To Download" },
           ].map((s) => (
@@ -110,8 +110,8 @@ export default function Home() {
                     <circle cx="18" cy="12" r="1" fill="currentColor"/>
                   </svg>
                 ),
-                title: "50+ Game Types",
-                desc: "From Ping Pong to Bowling to Beer Pong — Ranka has a scorecard built for every game you play.",
+                title: "150+ Game Types",
+                desc: "From Ping Pong to Bowling to Beer Pong — Ranka has a scorecard built for every game you play. Don't see one? Create your own game template on the fly.",
               },
               {
                 icon: (
@@ -125,7 +125,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Leagues & Teams",
-                desc: "Create leagues, manage rosters, track seasons. Run your own mini tournament with full standings.",
+                desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst your group reigns supreme.",
               },
               {
                 icon: (
@@ -138,7 +138,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Live Rankings",
-                desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top.",
+                desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats",
               },
             ].map((f) => (
               <div
