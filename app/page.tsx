@@ -4,7 +4,7 @@ export default function Home() {
 
       {/* Nav */}
       <nav className="flex justify-between items-center px-8 py-5 max-w-6xl mx-auto">
-        <span className="text-2xl font-bold tracking-tight">🏆 Ranka</span>
+        <img src="/AppLogo.svg" alt="Ranka" className="h-8 w-auto invert" />
         <a
           href="https://apps.apple.com"
           className="bg-white text-gray-950 text-sm font-semibold px-4 py-2 rounded-full hover:bg-gray-200 transition"
