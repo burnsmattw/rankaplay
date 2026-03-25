@@ -125,7 +125,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Leagues & Teams",
-                desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst your group reigns supreme.",
+                desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
               },
               {
                 icon: (
