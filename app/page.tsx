@@ -55,13 +55,29 @@ export default function Home() {
           style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.02em" }}
         >
           Score every game.<br />
-          <span style={{ color: "#818cf8" }}>Rank everyone.</span>
+          <span style={{ color: "#818cf8" }}>Track everything.</span>
         </h1>
-        <p className="text-xl mb-10" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-          Ranka is the ultimate scorekeeper for any game — board games, sports,
-          yard games, card games, and more. Track wins, rankings, and history
-          across all your players and leagues.
+
+        <p className="text-xl mb-8" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+          Ranka is the ultimate scorekeeper for any game — board games, sports, yard games, card games, and more.
         </p>
+        <ul className="text-left inline-block mb-10 space-y-3">
+          {[
+            "Full game history & live rankings, updated in real time",
+            "Analytics, win rates & scoring trends across every game you play",
+            "Head-to-head stats against everyone you've played — elite level data, for everyone",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3 text-lg" style={{ color: "#94a3b8" }}>
+              <span className="mt-1 flex-shrink-0 flex items-center justify-center rounded-full" style={{ width: "22px", height: "22px", backgroundColor: "rgba(99,102,241,0.2)", color: "#818cf8" }}>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 6l3 3 5-5"/>
+                </svg>
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
         <a
           href="https://apps.apple.com"
           className="inline-flex items-center gap-3 font-bold text-lg px-8 py-4 rounded-2xl transition"
@@ -81,7 +97,7 @@ export default function Home() {
       <section style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(255,255,255,0.03)" }}>
         <div className="max-w-4xl mx-auto px-6 py-8 grid grid-cols-3 text-center gap-4">
           {[
-            { value: "150+", label: "Game Types" },
+            { value: "300+", label: "Game Types" },
             { value: "∞", label: "Players & Teams" },
             { value: "Free", label: "To Download" },
           ].map((s) => (
@@ -99,7 +115,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-bold mb-16" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 icon: (
@@ -116,29 +132,35 @@ export default function Home() {
               {
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="8" r="3"/>
-                    <path d="M5 20a7 7 0 0 1 14 0"/>
-                    <path d="M17 8a3 3 0 1 1 0-6"/>
-                    <path d="M21 18a5 5 0 0 0-6-4.9"/>
-                    <path d="M7 8a3 3 0 1 0 0-6"/>
-                    <path d="M3 18a5 5 0 0 1 6-4.9"/>
+                    <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/>
+                    <path d="M9 12l2 2 4-4"/>
                   </svg>
                 ),
-                title: "Leagues & Teams",
+                title: "Leagues & Tournaments",
                 desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
               },
               {
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M8 21V7a4 4 0 0 1 8 0v14"/>
-                    <path d="M5 21h14"/>
-                    <path d="M12 3v2"/>
-                    <path d="M7 7H5a2 2 0 0 0-2 2v2a6 6 0 0 0 6 6"/>
-                    <path d="M17 7h2a2 2 0 0 1 2 2v2a6 6 0 0 1-6 6"/>
+                    <path d="M3 3v18h18"/>
+                    <rect x="7" y="13" width="3" height="8" rx="1"/>
+                    <rect x="12" y="8" width="3" height="13" rx="1"/>
+                    <rect x="17" y="4" width="3" height="17" rx="1"/>
                   </svg>
                 ),
                 title: "Live Rankings",
                 desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats.",
+              },
+              {
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                    <rect x="9" y="3" width="6" height="4" rx="1"/>
+                    <path d="M9 14l2 2 4-4"/>
+                  </svg>
+                ),
+                title: "No More Questions",
+                desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
               },
             ].map((f) => (
               <div
@@ -206,7 +228,7 @@ export default function Home() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved.
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569" }}>Support</a>
       </footer>
 
     </main>
