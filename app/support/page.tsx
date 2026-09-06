@@ -4,19 +4,19 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Is Ranka free to download?",
-    a: "Yes — Ranka is free to download on the App Store. You can start scoring games immediately without creating an account - though we highly recommend creating an account so you can sync up with Ranka friends and start logging games together.",
+    a: "Yes — Ranka is free to download on the App Store. There is a paid subscription to unlock advanced features such as extended rankings with advanced analytics, leagues, and touranments.",
   },
   {
     q: "Do I need an account to use Ranka?",
-    a: "No. Ranka can work fully in guest mode, storing everything locally on your device. Creating an account unlocks CloudKit sync across devices and social features like score verification and sharing with friends.",
+    a: "You can start scoring games immediately without creating an account - though we highly recommend creating an account so you can sync up with Ranka friends and start logging games together. Creating an account unlocks CloudKit sync across devices and social features like score verification and sharing with friends.",
   },
   {
     q: "How do I add players to a game?",
-    a: "When starting a new game, tap the players field to add players from your saved list or create new ones on the fly. You can add as many players or teams as the game supports.",
+    a: "When starting a new game, tap 'Add Players' or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the 'Create New Player' link at the bottom. You can add as many players or teams as the game supports.",
   },
   {
     q: "Can I edit or delete a game after it's been recorded?",
-    a: "Yes. You can edit or delete any game you logged from the game's detail view. Hard press on a game from the match history to delete a game. Note that only the person who logged the game can delete it.",
+    a: "The creator/owner of the logged game can edit the game via the Match History. Any edits made to an existing game will be sent to other Ranka accounts as a notification. This is to preserve the integrity of the game and ensure games are not confirmed and then altered to adjust stats or standings. Games can be deleted by hard-pressing the game in Match History and selecting Delete. Other Ranka accounts will be notified of games when they are deleted."
   },
   {
     q: "How does score verification work?",
@@ -28,15 +28,23 @@ const faqs = [
   },
   {
     q: "How do leagues and tournaments work?",
-    a: "You can create a league, invite players, and Ranka will track standings across all games played. Tournaments support bracket, round-robins, multi-day cummmulative championships with automatic advancement.",
+    a: "You can create a league, invite players, and Ranka will track standings across all games played. Schedules can be generated and scheduled games will show on the main menu for players set for those games. Tournaments support bracket, round-robins, multi-day cummmulative championships with automatic advancement.",
   },
   {
     q: "My data isn't syncing across devices. What should I do?",
-    a: "Make sure you're signed in with the same Apple ID on both devices and that iCloud is enabled for Ranka in your iOS Settings. If issues persist, try signing out and back in from the app's Settings screen.",
+    a: "Don't panic. Make sure you're signed in with the same Apple ID on both devices and that iCloud is enabled for Ranka in your iOS Settings. If issues persist, try signing out and back in from the app's Settings screen.",
+  },
+    {
+    q: "I can't use my phone during the game to log scores.",
+    a: "Not really a question, but we get you. That's where your Apple Watch comes into play. Start a game in Ranka on your phone then open the Ranka app on your watch. The new game will display on your watch where you can track scores realtime and it will feed back to your phone. Perfect for games like Tennis where you might not want to carry your phone while playing.",
+  },
+  {
+    q: "This is sweet. What other features does Ranka suppport?",
+    a: "We're glad you think so too. Ranka supports Siri - you can ask Siri to start a new game, bring you to rankings, and more.",
   },
   {
     q: "How do I delete my account?",
-    a: "You can delete your account and all associated data from within the app: Settings → Account → Delete Account. This is permanent and cannot be undone.",
+    a: "You can delete your account and all associated data from within the app: Settings → Delete Account. This is permanent and cannot be undone.",
   },
 ];
 
