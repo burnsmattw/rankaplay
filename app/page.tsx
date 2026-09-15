@@ -228,7 +228,7 @@ export default function Home() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569" }}>Support</a>
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569" }}>Beta</a>
       </footer>
 
     </main>
