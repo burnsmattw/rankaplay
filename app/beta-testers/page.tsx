@@ -38,13 +38,12 @@ const steps = [
           </li>
           <li>
             Once installed, open Ranka from your home screen like any other app. TestFlight will
-            notify you automatically whenever a new beta build is ready.
+            notify you automatically whenever a new beta build/upgrade is ready. That might happen a lot in these early days.
           </li>
         </ol>
         <p className="note">
-          Don&rsquo;t have an invite yet?{" "}
-          <a href="mailto:support@rankaplay.com">Email us</a> and we&rsquo;ll send one to the
-          address you want to use for testing.
+          Didn&rsquo;t get invited? Got a case of "FOMO"? <a href="mailto:support@rankaplay.com">Email me</a> and I&rsquo;ll send one to the address you
+          want to use for testing.
         </p>
       </>
     ),
@@ -183,9 +182,8 @@ export default function BetaTesters() {
           Beta Tester Guide
         </h1>
         <p className="text-lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-          Welcome to Ranka, Beta testing people! Testers? Betas? Testees? Thanks for helping test Ranka before launch. Here&rsquo;s everything you need: installing
-          the beta build, setting up your account and players, playing games, and sending us
-          feedback.
+          Welcome to Ranka, Beta testing people! Testers? Betas? Testees? Either way, thanks for helping test Ranka before launch. Here&rsquo;s everything you need to know to get started: installing
+          the beta build, setting up your account and players, playing games, and sending feedback.
         </p>
       </section>
 
