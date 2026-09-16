@@ -18,7 +18,7 @@ export default function Home() {
         <div className="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
           <img src="/AppLogo.svg" alt="Ranka" className="invert" style={{ height: "36px", width: "auto" }} />
           <a
-            href="https://apps.apple.com"
+            href="/beta-testers"
             className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
           >
             Download on iOS
@@ -206,7 +206,7 @@ export default function Home() {
           Free to download. No account required to start.
         </p>
         <a
-          href="https://apps.apple.com"
+          href="/beta-testers"
           className="inline-flex items-center gap-3 font-bold text-lg px-8 py-4 rounded-2xl transition"
           style={{
             background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
