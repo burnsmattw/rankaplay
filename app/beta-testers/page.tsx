@@ -53,16 +53,12 @@ const steps = [
     title: "Create your account",
     body: (
       <ol>
-        <li>
-          Open Ranka and tap <strong>Sign Up</strong> on the welcome screen.
-        </li>
-        <li>Enter your name and email address, then choose a password.</li>
-        <li>Verify your email if prompted.</li>
-        <li>
-          You can also start scoring games without an account &mdash; but signing up unlocks
+        <li>Open Ranka and tap <strong>Sign In</strong> on the welcome screen.</li>
+        <li>Select <strong>Sign in with Apple</strong> or <strong>Sign in with Passkey</strong>. Now you're in.</li>
+        <li>Click on your name in the top left to enter Account settings. Click on your name card to alter your picture, name, nickname, default color, and more.</li>
+        <li>You can also start scoring games without an account &mdash; but that's pretty lame. Signing up unlocks
           CloudKit sync across devices and social features like score verification and sharing
-          with friends.
-        </li>
+          with friends.</li>
       </ol>
     ),
   },
@@ -72,20 +68,19 @@ const steps = [
     body: (
       <>
         <p>
-          Managed players let you track games and scores for people who don&rsquo;t have (or
+          Now I assume you have friend(s), or at least people that are willing to tolerate a single game with you. They can have Ranka too (if they ask nicely) or you can create them as <strong>Managed Players</strong>. Managed players let you track games and scores for people who don&rsquo;t have (or
           don&rsquo;t need) their own Ranka account &mdash; kids, family members, or friends
           playing on your device.
         </p>
         <ol>
           <li>
-            When starting a new game, tap <strong>Add Players</strong>.
+            Select <strong>Players</strong> from the bottom navigation bar
           </li>
           <li>
-            Select <strong>Create New Player</strong> (or the + button) instead of picking an
-            existing account.
+            Select <strong>Add</strong> in the top right corner
           </li>
-          <li>Enter their name and, optionally, a photo or avatar.</li>
-          <li>Save &mdash; they now appear anytime you add players to a game.</li>
+          <li>Enter their name, nickname, photo, color, etc.</li>
+          <li>Save &mdash; they will now appear anytime you add players to a game.</li>
         </ol>
       </>
     ),
@@ -95,11 +90,13 @@ const steps = [
     title: "Start a game",
     body: (
       <ol>
-        <li>Tap New Game from the main menu.</li>
-        <li>Pick the game type &mdash; Ranka supports 300+ built-in types, or create a custom template.</li>
-        <li>Add players: your account, other Ranka users, or managed players.</li>
+        <p>Do you really think you're ready to play? Prove it.</p>
+        <li>Tap <strong>Start a New Game</strong> from the main menu.</li>
+        <li>Pick the game you want to play &mdash; Ranka supports 500+ built-in types, or you can create a custom template. If you end up creating a custom template, let me know so I can create this standard for the future.</li>
+        <li>Add players: your account, other Ranka users, managed players, or even a team of players.</li>
         <li>Log scores as you play, or enter them all at once at the end.</li>
-        <li>Finish the game to save it and update everyone&rsquo;s stats and rankings.</li>
+        <li><strong>End Game</strong> and then <strong>Confirm & Rank It</strong> to save the game and update everyone&rsquo;s stats and rankings.</li>
+        <li>There &mdash; you proved you were ready.</li>
       </ol>
     ),
   },
@@ -108,10 +105,12 @@ const steps = [
     title: "View rankings",
     body: (
       <ol>
-        <li>Open the Rankings tab.</li>
+        <li>Open the <strong>Rankings</strong> menu from the main menu's navigation bar.</li>
         <li>See where every player &mdash; account holders and managed players alike &mdash; stands overall.</li>
         <li>Filter by game type or time period for more specific leaderboards.</li>
-        <li>Tap any player to see their full match history, win rate, and head-to-head stats.</li>
+        <li>Tap any player to see their full rankings, match history, win rate, stats and more.</li>
+        <li>Select the <strong>checkbox</strong> to the left of multiple players to view their head-to-head stats.</li>
+        <li>Explore other ranking tabs such as <strong>Games</strong> for specific game and game type rankings</li>
       </ol>
     ),
   },
@@ -121,29 +120,20 @@ const steps = [
     body: (
       <>
         <p>
-          This is the most valuable part of being a beta tester &mdash; please report anything
-          that looks wrong, feels confusing, or crashes.
+          Here's where you get to tell me how worthless I am. This is the most valuable part of being a beta tester &mdash; please report anything
+          that looks wrong, feels confusing, could use some improvement, or crashes.
         </p>
         <p className="subhead">Taking a screenshot</p>
         <ol>
           <li>
-            Press <strong>Side Button + Volume Up</strong> at the same time to capture the
+            Take a screenshot &mdash; you know, like a normal person does on a phone. Press the <strong>Side Button + Volume Up</strong> at the same time to capture the
             screen.
           </li>
-          <li>Tap the screenshot preview in the corner right after capturing it.</li>
           <li>
-            Tap <strong>Share</strong>, then choose <strong>TestFlight</strong> from the share
-            sheet.
+            Tap <strong>Share</strong>, then choose <strong>Share Beta Feedback</strong> from the bottom of the share sheet.
           </li>
-        </ol>
-        <p className="subhead">Sending feedback</p>
-        <ol>
-          <li>Open the TestFlight app.</li>
-          <li>
-            Tap <strong>Ranka</strong>, then scroll down to <strong>Send Beta Feedback</strong>.
-          </li>
-          <li>Attach your screenshot and describe what happened, what you expected, and how to reproduce it.</li>
-          <li>Tap Submit.</li>
+          <li>Write your feedback where it says "Write your feedback here..." Do I need to hold your hand through everything?</li>
+          <li>Hit send &mdash; oh for Pete's sake it's the up arrow button.</li>
         </ol>
       </>
     ),
@@ -192,8 +182,8 @@ export default function BetaTesters() {
           Beta Tester Guide
         </h1>
         <p className="text-lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-          Thanks for helping test Ranka before launch. Here&rsquo;s everything you need: installing
-          the beta build, setting up your account and players, playing a game, and sending us
+          Welcome to Ranka, Beta testing people! Testers? Betas? Testees? Thanks for helping test Ranka before launch. Here&rsquo;s everything you need: installing
+          the beta build, setting up your account and players, playing games, and sending us
           feedback.
         </p>
       </section>
