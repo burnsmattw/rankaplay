@@ -44,8 +44,8 @@ const steps = [
           </li>
         </ol>
         <p className="note">
-          Didn&rsquo;t get invited? Got a case of "FOMO"? <a href="mailto:support@rankaplay.com">Email me</a>  and I&rsquo;ll send one to the address you
-          want to use for testing.
+          Didn&rsquo;t get invited? Got a case of "FOMO"? <a href="mailto:support@rankaplay.com">Email me</a>{" "}
+          and I&rsquo;ll send one to the address you want to use for testing.
         </p>
       </>
     ),
@@ -94,15 +94,17 @@ const steps = [
     title: "Start a game",
     image: "/Select_a_Game_framed.png",
     body: (
-      <ol>
+      <>
         <p>Do you really think you're ready to play? Prove it.</p>
+        <ol>
         <li>Tap <strong>Start a New Game</strong> from the main menu.</li>
         <li>Pick the game you want to play &mdash; Ranka supports 500+ built-in types, or you can create a custom template. If you end up creating a custom template, let me know so I can create this standard for the future.</li>
         <li>Add players: your account, other Ranka users, managed players, or even a team of players.</li>
         <li>Log scores as you play, or enter them all at once at the end.</li>
         <li><strong>End Game</strong> and then <strong>Confirm & Rank It</strong> to save the game and update everyone&rsquo;s stats and rankings.</li>
         <li>There &mdash; you proved you were ready.</li>
-      </ol>
+        </ol>
+      </>
     ),
   },
   {

@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-bold mb-24 md:mb-32" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="flex flex-col gap-28 md:gap-36">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-20">
             {[
               {
                 tag: "GAME LIBRARY",
@@ -141,13 +141,38 @@ export default function Home() {
                 desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
                 image: "/Cornhole_framed.png",
               },
-            ].map((f, i) => (
+            ].map((f) => (
               <div
                 key={f.title}
-                className={`flex flex-col-reverse items-center gap-10 md:gap-16 md:items-center ${
-                  i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-                }`}
+                className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-8"
               >
+                <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      width: "150%",
+                      aspectRatio: "1 / 1",
+                      transform: "translate(-50%, -50%)",
+                      background: "radial-gradient(circle, rgba(99,102,241,0.3) 0%, rgba(139,92,246,0.16) 40%, transparent 70%)",
+                      filter: "blur(18px)",
+                      pointerEvents: "none",
+                    }}
+                  />
+                  <img
+                    src={f.image}
+                    alt={`${f.title} screenshot`}
+                    className="relative"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "24px",
+                      boxShadow: "0 30px 70px rgba(0,0,0,0.55)",
+                      display: "block",
+                    }}
+                  />
+                </div>
                 <div className="flex-1 text-center md:text-left">
                   <div
                     className="text-xs font-bold mb-3 tracking-widest"
@@ -161,29 +186,6 @@ export default function Home() {
                   <p className="text-lg max-w-md mx-auto md:mx-0" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
                     {f.desc}
                   </p>
-                </div>
-                <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: "-15%",
-                      background: "radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 70%)",
-                      pointerEvents: "none",
-                    }}
-                  />
-                  <img
-                    src={f.image}
-                    alt={`${f.title} screenshot`}
-                    className="relative"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "24px",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                      boxShadow: "0 30px 70px rgba(0,0,0,0.55)",
-                      display: "block",
-                    }}
-                  />
                 </div>
               </div>
             ))}
