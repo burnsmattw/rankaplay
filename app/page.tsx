@@ -97,7 +97,7 @@ export default function Home() {
       <section style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(255,255,255,0.03)" }}>
         <div className="max-w-4xl mx-auto px-6 py-8 grid grid-cols-3 text-center gap-4">
           {[
-            { value: "300+", label: "Game Types" },
+            { value: "400+", label: "Game Types" },
             { value: "∞", label: "Players & Teams" },
             { value: "Free", label: "To Download" },
           ].map((s) => (
@@ -126,8 +126,9 @@ export default function Home() {
                     <circle cx="18" cy="12" r="1" fill="currentColor"/>
                   </svg>
                 ),
-                title: "150+ Game Types",
+                title: "400+ Game Types",
                 desc: "From Ping Pong to Bowling to Beer Pong — Ranka has a scorecard built for every game you play. Don't see one? Create your own game template on the fly.",
+                image: "/Sports_framed.png",
               },
               {
                 icon: (
@@ -138,6 +139,7 @@ export default function Home() {
                 ),
                 title: "Leagues & Tournaments",
                 desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
+                image: "/Tournament_framed.png",
               },
               {
                 icon: (
@@ -150,6 +152,7 @@ export default function Home() {
                 ),
                 title: "Live Rankings",
                 desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats.",
+                image: "/Head_to_Head_framed.png",
               },
               {
                 icon: (
@@ -161,29 +164,44 @@ export default function Home() {
                 ),
                 title: "No More Questions",
                 desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
+                image: "/Cornhole_framed.png",
               },
             ].map((f) => (
               <div
                 key={f.title}
-                className="rounded-2xl p-8"
+                className="rounded-2xl p-8 flex flex-col-reverse sm:grid sm:grid-cols-[1fr_auto] sm:gap-6 sm:items-center gap-4"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
-                <div
-                  className="flex items-center justify-center rounded-xl mb-5"
-                  style={{
-                    width: "52px",
-                    height: "52px",
-                    backgroundColor: "rgba(99,102,241,0.15)",
-                    color: "#818cf8",
-                  }}
-                >
-                  {f.icon}
+                <div>
+                  <div
+                    className="flex items-center justify-center rounded-xl mb-5"
+                    style={{
+                      width: "52px",
+                      height: "52px",
+                      backgroundColor: "rgba(99,102,241,0.15)",
+                      color: "#818cf8",
+                    }}
+                  >
+                    {f.icon}
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">{f.title}</h3>
+                  <p style={{ color: "#64748b", lineHeight: 1.7 }}>{f.desc}</p>
                 </div>
-                <h3 className="text-lg font-bold mb-2">{f.title}</h3>
-                <p style={{ color: "#64748b", lineHeight: 1.7 }}>{f.desc}</p>
+                <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "120px" }}>
+                  <img
+                    src={f.image}
+                    alt={`${f.title} screenshot`}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "16px",
+                      border: "1px solid rgba(255,255,255,0.1)",
+                    }}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -228,7 +246,7 @@ export default function Home() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569" }}>Beta</a>
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
       </footer>
 
     </main>

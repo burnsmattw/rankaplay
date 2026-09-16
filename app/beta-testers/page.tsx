@@ -44,7 +44,7 @@ const steps = [
           </li>
         </ol>
         <p className="note">
-          Didn&rsquo;t get invited? Got a case of "FOMO"? <a href="mailto:support@rankaplay.com">Email me</a> and I&rsquo;ll send one to the address you
+          Didn&rsquo;t get invited? Got a case of "FOMO"? <a href="mailto:support@rankaplay.com">Email me</a>  and I&rsquo;ll send one to the address you
           want to use for testing.
         </p>
       </>
@@ -271,7 +271,11 @@ export default function BetaTesters() {
             Thanks for beta testing Ranka
           </h2>
           <p className="mb-6" style={{ color: "#94a3b8" }}>
+            I'm going to keep the rest pretty vague intentionally. I want you to explore and try things out. Go forth and conquer.
+
             Questions, bugs, or ideas? Reach out any time &mdash; not just through TestFlight.
+
+            I love you. I always have. 
           </p>
           <a
             href="mailto:support@rankaplay.com"
@@ -298,7 +302,7 @@ export default function BetaTesters() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569" }}>Beta</a>
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
       </footer>
 
       <style>{`
@@ -306,6 +310,7 @@ export default function BetaTesters() {
         .step-body ol { list-style: decimal; padding-left: 1.25rem; color: #cbd5e1; }
         .step-body ol li { margin-bottom: 0.6rem; line-height: 1.7; }
         .step-body .subhead { color: #818cf8; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+        .step-body a, .note a { text-decoration: underline; }
         .step-body .note {
           margin-top: 0.75rem;
           padding: 0.75rem 1rem;
