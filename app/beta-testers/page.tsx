@@ -2,6 +2,7 @@ const steps = [
   {
     n: 1,
     title: "Install TestFlight",
+    image: "/TestFlight_framed.png",
     body: (
       <>
         <p>
@@ -26,6 +27,7 @@ const steps = [
   {
     n: 2,
     title: "Install Ranka from TestFlight",
+    image: "/TestFlight_Ranka_framed.png",
     body: (
       <>
         <ol>
@@ -51,6 +53,7 @@ const steps = [
   {
     n: 3,
     title: "Create your account",
+    image: "/Account_framed.png",
     body: (
       <ol>
         <li>Open Ranka and tap <strong>Sign In</strong> on the welcome screen.</li>
@@ -65,6 +68,7 @@ const steps = [
   {
     n: 4,
     title: "Add managed players",
+    image: "/New_Player_framed.png",
     body: (
       <>
         <p>
@@ -88,6 +92,7 @@ const steps = [
   {
     n: 5,
     title: "Start a game",
+    image: "/Select_a_Game_framed.png",
     body: (
       <ol>
         <p>Do you really think you're ready to play? Prove it.</p>
@@ -103,6 +108,7 @@ const steps = [
   {
     n: 6,
     title: "View rankings",
+    image: "/Rankings_framed.png",
     body: (
       <ol>
         <li>Open the <strong>Rankings</strong> menu from the main menu's navigation bar.</li>
@@ -117,6 +123,7 @@ const steps = [
   {
     n: 7,
     title: "Take beta screenshots & send feedback",
+    image: "/Feedback_framed.png",
     body: (
       <>
         <p>
@@ -204,7 +211,7 @@ export default function BetaTesters() {
       </section>
 
       {/* Steps */}
-      <section className="max-w-2xl mx-auto px-6 pb-20 space-y-4">
+      <section className="max-w-3xl mx-auto px-6 pb-20 space-y-4">
         {steps.map((s) => (
           <div
             key={s.n}
@@ -228,7 +235,23 @@ export default function BetaTesters() {
               </div>
               <h2 className="text-xl font-bold">{s.title}</h2>
             </div>
-            <div className="step-body">{s.body}</div>
+            <div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-8 items-start">
+              <div className="step-body flex-1">{s.body}</div>
+              {s.image && (
+                <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "180px" }}>
+                  <img
+                    src={s.image}
+                    alt={`${s.title} screenshot`}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "20px",
+                      border: "1px solid rgba(255,255,255,0.1)",
+                    }}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </section>
