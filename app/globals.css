@@ -24,32 +24,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.feature-reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.feature-reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.feature-reveal .feature-image {
-  transform: scale(0.92);
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.feature-reveal.is-visible .feature-image {
-  transform: scale(1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .feature-reveal,
-  .feature-reveal .feature-image {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}

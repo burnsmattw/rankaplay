@@ -1,4 +1,4 @@
-import FeatureReveal from "./FeatureReveal";
+import FeatureParallax from "./FeatureParallax";
 
 export default function Home() {
   return (
@@ -63,7 +63,21 @@ export default function Home() {
         <p className="text-xl mb-8" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
           Ranka is the ultimate scorekeeper for any game — board games, sports, yard games, card games, and more.
         </p>
-        <ul className="text-left inline-block mb-10 space-y-3">
+        <a
+          href="/beta-testers"
+          className="inline-flex items-center gap-3 font-bold text-lg px-8 py-4 rounded-2xl transition mb-10"
+          style={{
+            background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+            boxShadow: "0 0 40px rgba(99,102,241,0.4)",
+          }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Join Beta Testing
+        </a>
+
+        <ul className="text-left inline-block space-y-3">
           {[
             "Full game history & live rankings, updated in real time",
             "Analytics, win rates & scoring trends across every game you play",
@@ -79,20 +93,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-
-        <a
-          href="/beta-testers"
-          className="inline-flex items-center gap-3 font-bold text-lg px-8 py-4 rounded-2xl transition"
-          style={{
-            background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
-            boxShadow: "0 0 40px rgba(99,102,241,0.4)",
-          }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-          Join Beta Testing
-        </a>
       </section>
 
       {/* Stats bar */}
@@ -144,69 +144,75 @@ export default function Home() {
                 image: "/Cornhole_framed.png",
               },
             ].map((f, i) => (
-              <FeatureReveal
+              <FeatureParallax
                 key={f.title}
+                reverse={i % 2 === 1}
                 className={`relative flex flex-col items-center justify-center gap-8 md:gap-14 ${
                   i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    width: "90%",
-                    maxWidth: "700px",
-                    aspectRatio: "2 / 1",
-                    transform: "translate(-50%, -50%)",
-                    background: "radial-gradient(ellipse, rgba(99,102,241,0.14) 0%, rgba(139,92,246,0.08) 45%, transparent 75%)",
-                    filter: "blur(40px)",
-                    pointerEvents: "none",
-                    zIndex: -1,
-                  }}
-                />
-                <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
+                glow={
                   <div
                     style={{
                       position: "absolute",
                       top: "50%",
                       left: "50%",
-                      width: "150%",
-                      aspectRatio: "1 / 1",
+                      width: "90%",
+                      maxWidth: "700px",
+                      aspectRatio: "2 / 1",
                       transform: "translate(-50%, -50%)",
-                      background: "radial-gradient(circle, rgba(99,102,241,0.3) 0%, rgba(139,92,246,0.16) 40%, transparent 70%)",
-                      filter: "blur(18px)",
+                      background: "radial-gradient(ellipse, rgba(99,102,241,0.14) 0%, rgba(139,92,246,0.08) 45%, transparent 75%)",
+                      filter: "blur(40px)",
                       pointerEvents: "none",
+                      zIndex: -1,
                     }}
                   />
-                  <img
-                    src={f.image}
-                    alt={`${f.title} screenshot`}
-                    className="relative feature-image"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "24px",
-                      boxShadow: "0 30px 70px rgba(0,0,0,0.55)",
-                      display: "block",
-                    }}
-                  />
-                </div>
-                <div className="text-center md:text-left" style={{ maxWidth: "360px" }}>
-                  <div
-                    className="text-xs font-bold mb-3 tracking-widest"
-                    style={{ color: "#818cf8", letterSpacing: "0.15em" }}
-                  >
-                    {f.tag}
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ letterSpacing: "-0.01em" }}>
-                    {f.title}
-                  </h3>
-                  <p className="text-lg" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
-                    {f.desc}
-                  </p>
-                </div>
-              </FeatureReveal>
+                }
+                imageContent={
+                  <>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        width: "150%",
+                        aspectRatio: "1 / 1",
+                        transform: "translate(-50%, -50%)",
+                        background: "radial-gradient(circle, rgba(99,102,241,0.3) 0%, rgba(139,92,246,0.16) 40%, transparent 70%)",
+                        filter: "blur(18px)",
+                        pointerEvents: "none",
+                      }}
+                    />
+                    <img
+                      src={f.image}
+                      alt={`${f.title} screenshot`}
+                      className="relative"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        borderRadius: "24px",
+                        boxShadow: "0 30px 70px rgba(0,0,0,0.55)",
+                        display: "block",
+                      }}
+                    />
+                  </>
+                }
+                textContent={
+                  <>
+                    <div
+                      className="text-xs font-bold mb-3 tracking-widest"
+                      style={{ color: "#818cf8", letterSpacing: "0.15em" }}
+                    >
+                      {f.tag}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ letterSpacing: "-0.01em" }}>
+                      {f.title}
+                    </h3>
+                    <p className="text-lg" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+                      {f.desc}
+                    </p>
+                  </>
+                }
+              />
             ))}
           </div>
         </div>
