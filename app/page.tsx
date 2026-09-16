@@ -112,99 +112,75 @@ export default function Home() {
       {/* Features */}
       <section className="py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-center text-3xl font-bold mb-16" style={{ letterSpacing: "-0.02em" }}>
+          <h2 className="text-center text-3xl font-bold mb-24 md:mb-32" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
+          <div className="flex flex-col gap-28 md:gap-36">
             {[
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="6" width="20" height="12" rx="3"/>
-                    <path d="M6 12h4M8 10v4"/>
-                    <circle cx="15" cy="12" r="1" fill="currentColor"/>
-                    <circle cx="18" cy="12" r="1" fill="currentColor"/>
-                  </svg>
-                ),
-                title: "400+ Game Types",
+                tag: "GAME LIBRARY",
+                title: "400+ game types",
                 desc: "From Ping Pong to Bowling to Beer Pong — Ranka has a scorecard built for every game you play. Don't see one? Create your own game template on the fly.",
                 image: "/Sports_framed.png",
               },
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/>
-                    <path d="M9 12l2 2 4-4"/>
-                  </svg>
-                ),
-                title: "Leagues & Tournaments",
+                tag: "COMPETE",
+                title: "Leagues & tournaments",
                 desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
                 image: "/Tournament_framed.png",
               },
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 3v18h18"/>
-                    <rect x="7" y="13" width="3" height="8" rx="1"/>
-                    <rect x="12" y="8" width="3" height="13" rx="1"/>
-                    <rect x="17" y="4" width="3" height="17" rx="1"/>
-                  </svg>
-                ),
-                title: "Live Rankings",
+                tag: "STATS",
+                title: "Live rankings",
                 desc: "Rankings update in real time as scores are recorded. Always know who's sitting on top with specialized game rankings and head-to-head stats.",
                 image: "/Head_to_Head_framed.png",
               },
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
-                    <rect x="9" y="3" width="6" height="4" rx="1"/>
-                    <path d="M9 14l2 2 4-4"/>
-                  </svg>
-                ),
-                title: "No More Questions",
+                tag: "SCOREKEEPING",
+                title: "No more questions",
                 desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
                 image: "/Cornhole_framed.png",
               },
-            ].map((f) => (
+            ].map((f, i) => (
               <div
                 key={f.title}
-                className="relative rounded-2xl p-8 flex flex-col-reverse sm:grid sm:grid-cols-[1fr_auto] sm:gap-6 sm:items-center gap-4"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  overflow: "visible",
-                  zIndex: 1,
-                }}
+                className={`flex flex-col-reverse items-center gap-10 md:gap-16 md:items-center ${
+                  i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
               >
-                <div>
+                <div className="flex-1 text-center md:text-left">
                   <div
-                    className="flex items-center justify-center rounded-xl mb-5"
-                    style={{
-                      width: "52px",
-                      height: "52px",
-                      backgroundColor: "rgba(99,102,241,0.15)",
-                      color: "#818cf8",
-                    }}
+                    className="text-xs font-bold mb-3 tracking-widest"
+                    style={{ color: "#818cf8", letterSpacing: "0.15em" }}
                   >
-                    {f.icon}
+                    {f.tag}
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{f.title}</h3>
-                  <p style={{ color: "#64748b", lineHeight: 1.7 }}>{f.desc}</p>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ letterSpacing: "-0.01em" }}>
+                    {f.title}
+                  </h3>
+                  <p className="text-lg max-w-md mx-auto md:mx-0" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+                    {f.desc}
+                  </p>
                 </div>
-                <div
-                  className="mx-auto sm:mx-0 flex-shrink-0"
-                  style={{ width: "clamp(200px, 26vw, 300px)", margin: "-16px -24px -40px 0" }}
-                >
+                <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: "-15%",
+                      background: "radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 70%)",
+                      pointerEvents: "none",
+                    }}
+                  />
                   <img
                     src={f.image}
                     alt={`${f.title} screenshot`}
+                    className="relative"
                     style={{
                       width: "100%",
                       height: "auto",
-                      borderRadius: "20px",
+                      borderRadius: "24px",
                       border: "1px solid rgba(255,255,255,0.12)",
-                      boxShadow: "0 24px 60px rgba(0,0,0,0.55)",
+                      boxShadow: "0 30px 70px rgba(0,0,0,0.55)",
                       display: "block",
                     }}
                   />
