@@ -144,10 +144,25 @@ export default function Home() {
             ].map((f, i) => (
               <div
                 key={f.title}
-                className={`flex flex-col items-center justify-center gap-8 md:gap-14 ${
+                className={`relative flex flex-col items-center justify-center gap-8 md:gap-14 ${
                   i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
               >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    width: "90%",
+                    maxWidth: "700px",
+                    aspectRatio: "2 / 1",
+                    transform: "translate(-50%, -50%)",
+                    background: "radial-gradient(ellipse, rgba(99,102,241,0.14) 0%, rgba(139,92,246,0.08) 45%, transparent 75%)",
+                    filter: "blur(40px)",
+                    pointerEvents: "none",
+                    zIndex: -1,
+                  }}
+                />
                 <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
                   <div
                     style={{
