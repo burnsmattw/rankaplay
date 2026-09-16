@@ -221,24 +221,26 @@ export default function BetaTesters() {
               backgroundColor: "rgba(255,255,255,0.03)",
             }}
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div
-                className="flex items-center justify-center rounded-full font-extrabold flex-shrink-0"
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  backgroundColor: "rgba(99,102,241,0.15)",
-                  color: "#818cf8",
-                }}
-              >
-                {s.n}
+            <div className="flex flex-col-reverse sm:grid sm:grid-cols-[1fr_auto] sm:gap-8 sm:items-start gap-6">
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div
+                    className="flex items-center justify-center rounded-full font-extrabold flex-shrink-0"
+                    style={{
+                      width: "36px",
+                      height: "36px",
+                      backgroundColor: "rgba(99,102,241,0.15)",
+                      color: "#818cf8",
+                    }}
+                  >
+                    {s.n}
+                  </div>
+                  <h2 className="text-xl font-bold">{s.title}</h2>
+                </div>
+                <div className="step-body">{s.body}</div>
               </div>
-              <h2 className="text-xl font-bold">{s.title}</h2>
-            </div>
-            <div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-8 items-start">
-              <div className="step-body flex-1">{s.body}</div>
               {s.image && (
-                <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "180px" }}>
+                <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "260px" }}>
                   <img
                     src={s.image}
                     alt={`${s.title} screenshot`}
