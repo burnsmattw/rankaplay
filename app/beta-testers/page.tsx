@@ -171,7 +171,29 @@ export default function BetaTesters() {
       </nav>
 
       {/* Hero */}
-      <section className="text-center px-6 pt-20 pb-16 max-w-2xl mx-auto">
+      <section className="relative text-center px-6 pt-20 pb-16 max-w-2xl mx-auto">
+        {/* Glow behind logo */}
+        <div style={{
+          position: "absolute",
+          top: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "260px",
+          height: "260px",
+          background: "radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }} />
+
+        {/* Logo */}
+        <div className="flex justify-center mb-8" style={{ position: "relative" }}>
+          <img
+            src="/AppLogo.svg"
+            alt="Ranka"
+            className="invert"
+            style={{ height: "88px", width: "auto", opacity: 0.95 }}
+          />
+        </div>
+
         <div
           className="inline-block text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6"
           style={{ backgroundColor: "rgba(99,102,241,0.15)", color: "#818cf8" }}
