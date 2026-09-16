@@ -194,12 +194,6 @@ export default function BetaTesters() {
           />
         </div>
 
-        <div
-          className="inline-block text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6"
-          style={{ backgroundColor: "rgba(99,102,241,0.15)", color: "#818cf8" }}
-        >
-          Ranka Beta Program
-        </div>
         <h1 className="text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>
           Beta Tester Guide
         </h1>
