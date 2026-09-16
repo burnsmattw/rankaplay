@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-bold mb-16" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
             {[
               {
                 icon: (
@@ -169,10 +169,12 @@ export default function Home() {
             ].map((f) => (
               <div
                 key={f.title}
-                className="rounded-2xl p-8 flex flex-col-reverse sm:grid sm:grid-cols-[1fr_auto] sm:gap-6 sm:items-center gap-4"
+                className="relative rounded-2xl p-8 flex flex-col-reverse sm:grid sm:grid-cols-[1fr_auto] sm:gap-6 sm:items-center gap-4"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
+                  overflow: "visible",
+                  zIndex: 1,
                 }}
               >
                 <div>
@@ -190,15 +192,20 @@ export default function Home() {
                   <h3 className="text-lg font-bold mb-2">{f.title}</h3>
                   <p style={{ color: "#64748b", lineHeight: 1.7 }}>{f.desc}</p>
                 </div>
-                <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "120px" }}>
+                <div
+                  className="mx-auto sm:mx-0 flex-shrink-0"
+                  style={{ width: "clamp(200px, 26vw, 300px)", margin: "-16px -24px -40px 0" }}
+                >
                   <img
                     src={f.image}
                     alt={`${f.title} screenshot`}
                     style={{
                       width: "100%",
                       height: "auto",
-                      borderRadius: "16px",
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      borderRadius: "20px",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      boxShadow: "0 24px 60px rgba(0,0,0,0.55)",
+                      display: "block",
                     }}
                   />
                 </div>
