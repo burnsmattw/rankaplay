@@ -42,8 +42,9 @@ const steps = [
           </li>
         </ol>
         <p className="note">
-          Don&rsquo;t have an invite yet? Email us and we&rsquo;ll send one to the address you
-          want to use for testing.
+          Don&rsquo;t have an invite yet?{" "}
+          <a href="mailto:support@rankaplay.com">Email us</a> and we&rsquo;ll send one to the
+          address you want to use for testing.
         </p>
       </>
     ),
