@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-bold mb-24 md:mb-32" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-20">
+          <div className="flex flex-col gap-20 md:gap-24">
             {[
               {
                 tag: "GAME LIBRARY",
@@ -141,10 +141,12 @@ export default function Home() {
                 desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
                 image: "/Cornhole_framed.png",
               },
-            ].map((f) => (
+            ].map((f, i) => (
               <div
                 key={f.title}
-                className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-8"
+                className={`flex flex-col items-center justify-center gap-8 md:gap-14 ${
+                  i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
               >
                 <div className="relative flex-shrink-0" style={{ width: "clamp(220px, 26vw, 300px)" }}>
                   <div
@@ -173,7 +175,7 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <div className="flex-1 text-center md:text-left">
+                <div className="text-center md:text-left" style={{ maxWidth: "360px" }}>
                   <div
                     className="text-xs font-bold mb-3 tracking-widest"
                     style={{ color: "#818cf8", letterSpacing: "0.15em" }}
@@ -183,7 +185,7 @@ export default function Home() {
                   <h3 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ letterSpacing: "-0.01em" }}>
                     {f.title}
                   </h3>
-                  <p className="text-lg max-w-md mx-auto md:mx-0" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+                  <p className="text-lg" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
                     {f.desc}
                   </p>
                 </div>
