@@ -119,7 +119,7 @@ export default function Home() {
                 tag: "COMPETE",
                 title: "Leagues & tournaments",
                 desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
-                image: "/Tournament_framed.png",
+                image: "/Tournament_framed_v2.png",
               },
               {
                 tag: "STATS",
