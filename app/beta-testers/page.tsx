@@ -98,7 +98,7 @@ const steps = [
         <p>Do you really think you're ready to play? Prove it.</p>
         <ol>
         <li>Tap <strong>Start a New Game</strong> from the main menu.</li>
-        <li>Pick the game you want to play &mdash; Ranka supports 500+ built-in types, or you can create a custom template. If you end up creating a custom template, let me know so I can create this standard for the future.</li>
+        <li>Pick the game you want to play &mdash; Ranka supports 400+ built-in types, or you can create a custom template. If you end up creating a custom template, let me know so I can create this standard for the future.</li>
         <li>Add players: your account, other Ranka users, managed players, or even a team of players.</li>
         <li>Log scores as you play, or enter them all at once at the end.</li>
         <li><strong>End Game</strong> and then <strong>Confirm & Rank It</strong> to save the game and update everyone&rsquo;s stats and rankings.</li>
