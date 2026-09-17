@@ -26,8 +26,12 @@ const faqs: { q: string; a: string }[] = [
     a: "When starting a new game, tap ***Add Players*** or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the ***Create New Player*** link at the bottom. You can add as many players or teams as the game supports.",
   },
   {
-    q: "Can I edit or delete a game after it's been recorded?",
-    a: "The creator/owner of the logged game can edit the game via the Match History. Any edits made to an existing game will be sent to other Ranka accounts as a notification. This is to preserve the integrity of the game and ensure games are not confirmed and then altered to adjust stats or standings. Games can be deleted via the ***Match History***. Other Ranka accounts will be notified of games when they are deleted."
+    q: "Can I edit a game after it's been recorded?",
+    a: "The creator/owner of the logged game can edit the game via the ***Match History***. Click the game and then ***Edit Game***. Any edits made to an existing game will be sent to other Ranka accounts as a notification. This is to preserve the integrity of the game and ensure games are not confirmed and then altered to adjust stats or standings."
+  },
+  {
+    q: "Can I delete a game after it's been recorded?",
+    a: "Games can be deleted by the creator/owner of the game via the ***Match History***. Click ***Select Games to Delete*** at the bottom of the list and then select any games you wish to delete. Other Ranka accounts will be notified of games when they are deleted."
   },
   {
     q: "How does score verification work?",
@@ -116,10 +120,10 @@ export default function Support() {
             <img src="/AppLogo.svg" alt="Ranka" className="invert" style={{ height: "36px", width: "auto" }} />
           </a>
           <a
-            href="https://apps.apple.com"
+            href="/beta-testers"
             className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
           >
-            Download on iOS
+            Join Beta Testing
           </a>
         </div>
       </nav>
