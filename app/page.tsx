@@ -1,4 +1,5 @@
 import FeatureParallax from "./FeatureParallax";
+import StatsBar from "./StatsBar";
 
 export default function Home() {
   return (
@@ -97,27 +98,16 @@ export default function Home() {
 
       {/* Stats bar */}
       <section style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(255,255,255,0.03)" }}>
-        <div className="max-w-4xl mx-auto px-6 py-8 grid grid-cols-3 text-center gap-4">
-          {[
-            { value: "400+", label: "Game Types" },
-            { value: "∞", label: "Players & Teams" },
-            { value: "Free", label: "To Download" },
-          ].map((s) => (
-            <div key={s.label}>
-              <div className="text-3xl font-extrabold" style={{ color: "#818cf8" }}>{s.value}</div>
-              <div className="text-sm mt-1" style={{ color: "#64748b" }}>{s.label}</div>
-            </div>
-          ))}
-        </div>
+        <StatsBar />
       </section>
 
       {/* Features */}
-      <section className="py-28 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-center text-3xl font-bold mb-24 md:mb-32" style={{ letterSpacing: "-0.02em" }}>
+          <h2 className="text-center text-3xl font-bold mb-16 md:mb-20" style={{ letterSpacing: "-0.02em" }}>
             Everything you need to run the game
           </h2>
-          <div className="flex flex-col gap-20 md:gap-24">
+          <div className="flex flex-col gap-14 md:gap-16">
             {[
               {
                 tag: "GAME LIBRARY",
