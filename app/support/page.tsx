@@ -1,7 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
-const faqs = [
+/** Renders `**text**` inside an FAQ answer as bold. */
+function renderBold(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
+const faqs: { q: string; a: string }[] = [
   {
     q: "Is Ranka free to download?",
     a: "Yes — Ranka is free to download on the App Store. There is a paid subscription to unlock advanced features such as extended rankings with advanced analytics, leagues, and touranments.",
@@ -12,7 +23,7 @@ const faqs = [
   },
   {
     q: "How do I add players to a game?",
-    a: "When starting a new game, tap 'Add Players' or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the 'Create New Player' link at the bottom. You can add as many players or teams as the game supports.",
+    a: "When starting a new game, tap '**Add Players**' or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the 'Create New Player' link at the bottom. You can add as many players or teams as the game supports.",
   },
   {
     q: "Can I edit or delete a game after it's been recorded?",
@@ -68,7 +79,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <div className="px-6 pb-5" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
-          {a}
+          {renderBold(a)}
         </div>
       )}
     </div>
@@ -107,9 +118,14 @@ export default function Support() {
 
       {/* Hero */}
       <section className="text-center px-6 pt-20 pb-16 max-w-2xl mx-auto">
-        <h1 className="text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>Support</h1>
+        <img src="/AppLogo.svg" alt="Ranka" className="invert mx-auto mb-6" style={{ height: "56px", opacity: 0.95 }} />
+        <h1 className="text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>Support/FAQ</h1>
         <p className="text-lg" style={{ color: "#94a3b8" }}>
-          Find answers to common questions below, or reach out and we'll get back to you.
+          Find answers to common questions below, or{" "}
+          <a href="mailto:support@rankaplay.com" style={{ color: "#818cf8", textDecoration: "underline" }}>
+            reach out
+          </a>{" "}
+          and we'll get back to you.
         </p>
       </section>
 
@@ -161,7 +177,7 @@ export default function Support() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support/FAQ</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
       </footer>
 
     </main>

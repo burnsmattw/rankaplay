@@ -20,12 +20,21 @@ export default function Home() {
       >
         <div className="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
           <img src="/AppLogo.svg" alt="Ranka" className="invert" style={{ height: "36px", width: "auto" }} />
-          <a
-            href="/beta-testers"
-            className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
-          >
-            Join Beta Testing
-          </a>
+          <div className="flex items-center gap-6">
+            <a
+              href="/support"
+              className="text-sm font-medium transition"
+              style={{ color: "#94a3b8" }}
+            >
+              Support/FAQ
+            </a>
+            <a
+              href="/beta-testers"
+              className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
+            >
+              Join Beta Testing
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -246,7 +255,7 @@ export default function Home() {
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
+        © {new Date().getFullYear()} Ranka. All rights reserved. · <a href="/privacy" style={{ color: "#475569", textDecoration: "underline" }}>Privacy Policy</a> · <a href="/support" style={{ color: "#475569", textDecoration: "underline" }}>Support/FAQ</a> · <a href="/beta-testers" style={{ color: "#475569", textDecoration: "underline" }}>Beta</a>
       </footer>
 
     </main>
