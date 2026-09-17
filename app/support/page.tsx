@@ -1,12 +1,12 @@
 "use client";
 import { useState, type ReactNode } from "react";
 
-/** Renders `**text**` inside an FAQ answer as bold. */
+/** Renders `***text***` inside an FAQ answer as bold. */
 function renderBold(text: string): ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const parts = text.split(/(\*\*\*[^*]+\*\*\*)/g);
   return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    if (part.startsWith("***") && part.endsWith("***")) {
+      return <strong key={i}>{part.slice(3, -3)}</strong>;
     }
     return <span key={i}>{part}</span>;
   });
@@ -15,39 +15,47 @@ function renderBold(text: string): ReactNode {
 const faqs: { q: string; a: string }[] = [
   {
     q: "Is Ranka free to download?",
-    a: "Yes — Ranka is free to download on the App Store. There is a paid subscription to unlock advanced features such as extended rankings with advanced analytics, leagues, and touranments.",
+    a: "You bet your butt Ranka's ***free to download*** on the App Store! For the serious gamers and stat-heads, there is a ***paid subscription*** to unlock advanced features such as extended rankings with advanced analytics, leagues, and touranments.",
   },
   {
     q: "Do I need an account to use Ranka?",
-    a: "You can start scoring games immediately without creating an account - though we highly recommend creating an account so you can sync up with Ranka friends and start logging games together. Creating an account unlocks CloudKit sync across devices and social features like score verification and sharing with friends.",
+    a: "You can start scoring games immediately without creating an account - but it's objectively not as fun. We highly recommend creating an account so you can sync up with Ranka friends and start logging games together. Creating an account unlocks CloudKit syncing across devices and social features like score verification and sharing with friends.",
   },
   {
     q: "How do I add players to a game?",
-    a: "When starting a new game, tap '**Add Players**' or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the 'Create New Player' link at the bottom. You can add as many players or teams as the game supports.",
+    a: "When starting a new game, tap ***Add Players*** or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the ***Create New Player*** link at the bottom. You can add as many players or teams as the game supports.",
   },
   {
     q: "Can I edit or delete a game after it's been recorded?",
-    a: "The creator/owner of the logged game can edit the game via the Match History. Any edits made to an existing game will be sent to other Ranka accounts as a notification. This is to preserve the integrity of the game and ensure games are not confirmed and then altered to adjust stats or standings. Games can be deleted by hard-pressing the game in Match History and selecting Delete. Other Ranka accounts will be notified of games when they are deleted."
+    a: "The creator/owner of the logged game can edit the game via the Match History. Any edits made to an existing game will be sent to other Ranka accounts as a notification. This is to preserve the integrity of the game and ensure games are not confirmed and then altered to adjust stats or standings. Games can be deleted via the ***Match History***. Other Ranka accounts will be notified of games when they are deleted."
   },
   {
     q: "How does score verification work?",
-    a: "When you log a game, other players who are Ranka users can be notified to verify the result. Once verified, the game is marked as confirmed.",
+    a: "When you log a game, other players who are Ranka users can be notified to verify the result. Once verified, the game is marked as confirmed and starts counting towards rankings and stats.",
   },
   {
     q: "What games does Ranka support?",
-    a: "Ranka supports 300+ game types including board games, card games, yard games, sports, and more. If a game isn't in the list, you can create a custom game template. Or let us know and we'll be happy to include it system-wide.",
+    a: "Ranka supports 400+ game types including board games, card games, yard games, sports, and more. If a game isn't in the list, you can create a custom game template. Or let us know and we'll be happy to include it system-wide. You can do this directly from Ranka via Settings > Request Addition to Ranka.",
   },
   {
     q: "How do leagues and tournaments work?",
-    a: "You can create a league, invite players, and Ranka will track standings across all games played. Schedules can be generated and scheduled games will show on the main menu for players set for those games. Tournaments support bracket, round-robins, multi-day cummmulative championships with automatic advancement.",
+    a: "Like a league and tournament should. You can create a league, invite players, and Ranka will track standings across all games played. Schedules can be generated and scheduled games will show on the main menu for players set for those games. Tournaments support single elimination, double elimination,, round-robins, multi-day cummmulative championships, points championships, Olympics, and Swiss tournament styles - all with automatic advancement.",
   },
   {
     q: "My data isn't syncing across devices. What should I do?",
-    a: "Don't panic. Make sure you're signed in with the same Apple ID on both devices and that iCloud is enabled for Ranka in your iOS Settings. If issues persist, try signing out and back in from the app's Settings screen.",
+    a: "Don't panic! BREATHE! Make sure you're signed in with the same Apple ID on both devices and that iCloud is enabled for Ranka in your iOS Settings. If issues persist, try signing out and back in from the app's Settings screen.",
   },
     {
     q: "I can't use my phone during the game to log scores.",
     a: "Not really a question, but we get you. That's where your Apple Watch comes into play. Start a game in Ranka on your phone then open the Ranka app on your watch. The new game will display on your watch where you can track scores realtime and it will feed back to your phone. Perfect for games like Tennis where you might not want to carry your phone while playing.",
+  },
+  {
+    q: "I don't want to hover over my friend's phone to see the scores. What can be done about this?",
+    a: "Sounds like you're not close friends. But we get it. That's where Go Live can help. While in a game, tap the ***...*** in the top right. In Options, select ***Go Live***. This will create a live game that other Ranka accounts can join. The live game will appear on the other phone in the area and friends can then join, view scores, and even log their own scores.",
+  },
+  {
+    q: "I'm half-fish and I sold my voice to an ancient sea witch, how can I tell my fellow players the score after each round?",
+    a: "Let Ranka speak for you. With Announce Scores, Ranka will call out everyone's scores at the end of each round. If you're in a situation where someone didn't score in a round - enter 0 for them so Ranka knows that round is actually over. To turn this on while in a game, tap the ***...*** in the top right. In Options, turn on ***Announce Scores***. Additionally you can set this once and for all under ***Settings*** → turn on ***Announce Score at End of Round***.",
   },
   {
     q: "This is sweet. What other features does Ranka suppport?",
@@ -55,7 +63,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How do I delete my account?",
-    a: "You can delete your account and all associated data from within the app: Settings → Delete Account. This is permanent and cannot be undone.",
+    a: "But... but... why? Is it something we said? If you absolutely must go, you can delete your account and all associated data from within the app: ***Settings → Delete Account***. This, like death, is permanent and cannot be undone.",
   },
 ];
 
@@ -133,9 +141,9 @@ export default function Support() {
         <img src="/AppLogo.svg" alt="Ranka" className="invert relative mx-auto mb-6" style={{ height: "56px", opacity: 0.95 }} />
         <h1 className="relative text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>Support/FAQ</h1>
         <p className="text-lg" style={{ color: "#94a3b8" }}>
-          Find answers to common questions below, or{" "}
+          Who? What? When? Where? Why? How? These are all questions. Below are some other common questions. And those questions have answers. Don't see a question you are questioning?{" "}
           <a href="mailto:support@rankaplay.com" style={{ color: "#818cf8", textDecoration: "underline" }}>
-            reach out
+            Reach out
           </a>{" "}
           and we'll get back to you.
         </p>
