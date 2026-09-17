@@ -117,9 +117,21 @@ export default function Support() {
       </nav>
 
       {/* Hero */}
-      <section className="text-center px-6 pt-20 pb-16 max-w-2xl mx-auto">
-        <img src="/AppLogo.svg" alt="Ranka" className="invert mx-auto mb-6" style={{ height: "56px", opacity: 0.95 }} />
-        <h1 className="text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>Support/FAQ</h1>
+      <section className="relative text-center px-6 pt-20 pb-16 max-w-2xl mx-auto">
+        {/* Glow behind logo */}
+        <div style={{
+          position: "absolute",
+          top: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "400px",
+          height: "400px",
+          background: "radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }} />
+
+        <img src="/AppLogo.svg" alt="Ranka" className="invert relative mx-auto mb-6" style={{ height: "56px", opacity: 0.95 }} />
+        <h1 className="relative text-4xl font-extrabold mb-4" style={{ letterSpacing: "-0.02em" }}>Support/FAQ</h1>
         <p className="text-lg" style={{ color: "#94a3b8" }}>
           Find answers to common questions below, or{" "}
           <a href="mailto:support@rankaplay.com" style={{ color: "#818cf8", textDecoration: "underline" }}>
