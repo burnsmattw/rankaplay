@@ -62,7 +62,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl mb-8" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-          Ranka is the ultimate scorekeeper for any game — board games, sports, yard games, card games, and more.
+          Ranka is the ultimate scorekeeper for any game — board games, sports, yard games, card games, and more. If you can play it, you can rank it.
         </p>
         <a
           href="/beta-testers"
