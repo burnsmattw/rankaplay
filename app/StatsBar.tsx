@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { DownloadSimple, GameController, UsersThree } from "@phosphor-icons/react";
 
 function useCountUp(target: number, active: boolean) {
   const [value, setValue] = useState(0);
@@ -37,37 +38,17 @@ const stats: {
     label: "Game Types",
     target: 400,
     suffix: "+",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1.5" />
-        <rect x="14" y="3" width="7" height="7" rx="1.5" />
-        <rect x="3" y="14" width="7" height="7" rx="1.5" />
-        <rect x="14" y="14" width="7" height="7" rx="1.5" />
-      </svg>
-    ),
+    icon: <GameController size={20} weight="fill" />,
   },
   {
     label: "Players & Teams",
     display: "∞",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="8" cy="9" r="3" />
-        <circle cx="16" cy="9" r="3" />
-        <path d="M3 20c0-3.3 2.2-5.5 5-5.5s5 2.2 5 5.5" />
-        <path d="M11 14.5c2.8 0 5 2.2 5 5.5" />
-      </svg>
-    ),
+    icon: <UsersThree size={20} weight="fill" />,
   },
   {
     label: "To Download",
     display: "Free",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3v12" />
-        <path d="M7 10l5 5 5-5" />
-        <path d="M4 19h16" />
-      </svg>
-    ),
+    icon: <DownloadSimple size={20} weight="bold" />,
   },
 ];
 

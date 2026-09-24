@@ -12,7 +12,7 @@ function renderBold(text: string): ReactNode {
   });
 }
 
-const faqs: { q: string; a: string }[] = [
+const faqs: { q: string; a: string; image?: string }[] = [
   {
     q: "Is Ranka free to download?",
     a: "You bet your butt Ranka's ***free to download*** on the App Store! For the serious gamers and stat-heads, there is a ***paid subscription*** to unlock advanced features such as extended rankings with advanced analytics, leagues, and touranments.",
@@ -24,6 +24,7 @@ const faqs: { q: string; a: string }[] = [
   {
     q: "How do I add players to a game?",
     a: "When starting a new game, tap ***Add Players*** or use the quick selection links for common players. Add Players will show you a full list of all available players with an easy search function. You can also create players on the fly from within the Add Players screen by selecting + or the ***Create New Player*** link at the bottom. You can add as many players or teams as the game supports.",
+    image: "/Player_Profile_framed.png",
   },
   {
     q: "Can I edit a game after it's been recorded?",
@@ -31,7 +32,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Can I delete a game after it's been recorded?",
-    a: "Games can be deleted by the creator/owner of the game via the ***Match History***. Click ***Select Games to Delete*** at the bottom of the list and then select any games you wish to delete. Other Ranka accounts will be notified of games when they are deleted."
+    a: "Games can be deleted by the creator/owner of the game via the ***Match History***. Click ***Select Games to Delete*** at the bottom of the list and then select any games you wish to delete. Or enter the game and hit ***Delete Game*** at the bottom. Other Ranka accounts will be notified of games when they are deleted."
   },
   {
     q: "How does score verification work?",
@@ -40,6 +41,7 @@ const faqs: { q: string; a: string }[] = [
   {
     q: "What games does Ranka support?",
     a: "Ranka supports 400+ game types including board games, card games, yard games, sports, and more. If a game isn't in the list, you can create a custom game template. Or let us know and we'll be happy to include it system-wide. You can do this directly from Ranka via Settings > Request Addition to Ranka.",
+    image: "/Running_framed.png",
   },
   {
     q: "How do leagues and tournaments work?",
@@ -71,7 +73,7 @@ const faqs: { q: string; a: string }[] = [
   },
 ];
 
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, image }: { q: string; a: string; image?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -90,8 +92,22 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       {open && (
-        <div className="px-6 pb-5" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
-          {renderBold(a)}
+        <div className="px-6 pb-5 flex flex-col sm:flex-row gap-6" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+          <div className="flex-1">{renderBold(a)}</div>
+          {image && (
+            <div className="mx-auto sm:mx-0 flex-shrink-0" style={{ width: "260px" }}>
+              <img
+                src={image}
+                alt={`${q} screenshot`}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "20px",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                }}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -158,7 +174,7 @@ export default function Support() {
         <h2 className="text-xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq) => (
-            <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+            <FAQItem key={faq.q} q={faq.q} a={faq.a} image={faq.image} />
           ))}
         </div>
       </section>
