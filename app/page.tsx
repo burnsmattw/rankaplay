@@ -125,10 +125,10 @@ export default function Home() {
                 image: "/Sports_framed.png",
               },
               {
-                tag: "COMPETE",
-                title: "Leagues & tournaments",
-                desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
-                image: "/Tournament_framed_v2.png",
+                tag: "SCOREKEEPING",
+                title: "No more questions",
+                desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
+                image: "/Cornhole_framed.png",
               },
               {
                 tag: "STATS",
@@ -137,10 +137,10 @@ export default function Home() {
                 image: "/Head_to_Head_framed.png",
               },
               {
-                tag: "SCOREKEEPING",
-                title: "No more questions",
-                desc: "No more mental math. No more scrawl on paper scorecards. No more wondering \"who won last time?\" or \"who really has hit the most holes in cornhole?\" Ranka has the answers.",
-                image: "/Cornhole_framed.png",
+                tag: "COMPETE",
+                title: "Leagues & tournaments",
+                desc: "Create leagues, manage rosters, track seasons. Generate schedules automatically. Run your own tournament and find out who amongst you reigns supreme.",
+                image: "/Tournament_framed_v2.png",
               },
             ].map((f, i) => (
               <FeatureParallax
