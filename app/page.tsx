@@ -30,9 +30,9 @@ export default function Home() {
             </a>
             <a
               href="/beta-testers"
-              className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
+              className="bg-white text-gray-950 text-sm font-semibold px-5 py-2 rounded-full whitespace-nowrap hover:bg-gray-200 transition"
             >
-              Join Beta Testing
+              Join Beta
             </a>
           </div>
         </div>
