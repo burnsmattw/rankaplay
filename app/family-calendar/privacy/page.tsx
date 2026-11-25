@@ -75,7 +75,7 @@ export default function FamilyCalendarPrivacy() {
         className="text-center text-sm py-8 px-6"
         style={{ color: "#334155", borderTop: "1px solid rgba(255,255,255,0.06)" }}
       >
-        Family Calendar · <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: "#475569", textDecoration: "underline" }}>{CONTACT_EMAIL}</a>
+        <a href="/family-calendar" style={{ color: "#475569", textDecoration: "underline" }}>Family Calendar</a> · <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: "#475569", textDecoration: "underline" }}>{CONTACT_EMAIL}</a>
       </footer>
     </main>
   );
